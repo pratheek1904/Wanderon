@@ -1,0 +1,46 @@
+.App{
+  text-align: center;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: aquamarine;
+}
+h3{
+  color: brown;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width:40%;
+  list-style: none;
+}
+img{
+  margin-top: 50px;
+} 
+.homePage{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+} 
+section{
+  margin-top: 15%;
+}
+
+.image{
+  display: flex;
+  justify-content: space-around;
+  width: 150%;
+}
+.about2{
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.projectsList{
+  margin-left: 2%;
+  margin-top: 3%;
+}
+.about{
+  
+  margin-left: 5%;
+}
