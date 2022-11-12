@@ -1,0 +1,11 @@
+.heading{
+    text-align: center;
+    /* background-color: aliceblue; */
+}
+*{
+    padding: 0px;
+    margin: 1px;
+}
+.nav-barr{
+    position: static;
+}
