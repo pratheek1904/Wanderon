@@ -8,6 +8,7 @@ const Home = () => {
     </Wrapper>
     );
 };
-const Wrapper=styled.section``;
+const Wrapper=styled.section`
+`;
 
 export default Home;
