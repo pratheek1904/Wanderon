@@ -1,20 +1,21 @@
 
 import './App.css';
-import {BrowserRouter,Route,} from  'react-router-dom'
+import {BrowserRouter,Route, } from  'react-router-dom'
 import NavBar from './NavBar';
-import Home from './Components/Home';
-import IntlTrips from './Components/IntlTrips';
 import Xmas from './Components/Xmas';
 import Weekend from './Components/Weekend';
 import Backpack from './Components/Backpack';
+import Home from './Components/Home';
+import Login from './Components/Login';
 
 function App() {
   return (
   <BrowserRouter>
   <NavBar/>
-  <Route path='/' exact component={Home}/>
+
+  <Route path={'/'} exact component={Home}></Route>
   <Route path='/Xmas'  component={Xmas}/>
-  <Route path='/IntlTrips' component={IntlTrips}/>
+  <Route path='/Login' component={Login}/>
   <Route path='/Weekend' component={Weekend}/> 
   <Route path='/Backpack' component={Backpack}/> 
   </BrowserRouter>

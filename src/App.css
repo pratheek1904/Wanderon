@@ -1,14 +1,20 @@
 .App{
   text-align: center;
 }
+*{
+  margin:0;
+  padding: 0;
+}
 nav{
   display: flex;
   justify-content: space-around;
   background-color: aquamarine;
 }
+
 h3{
   color: brown;
 }
+
 .nav-links{
   display: flex;
   justify-content: space-around;
