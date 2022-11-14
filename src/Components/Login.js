@@ -29,7 +29,7 @@ const handleRemove=(id)=>{
   const removed=myarray.filter((elem)=>{
     return elem.id!==id
   })
-  alert('would you like to remove')
+  alert('would you like to logout')
   setmyarray(removed)
 }
   return (
@@ -68,7 +68,7 @@ const handleRemove=(id)=>{
         <div key={elem.id} >
             <h3>email:{elem.myemail}</h3> 
             <p>password:{elem.mypassword}</p>
-      <NavLink to='/Home'>       <button onClick={()=>handleRemove(elem.id)}>Remove</button></NavLink>
+        <NavLink to='/Xmas'><button onClick={()=>handleRemove(elem.id)}>Logout</button></NavLink>
           </div>
        </>
         );

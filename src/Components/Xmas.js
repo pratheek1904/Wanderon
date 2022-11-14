@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "../Components/Comp.css";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 
 
 const Xmas = () => {
@@ -18,7 +20,7 @@ const Xmas = () => {
     },[]);
 const handleShow=(id)=>{
   const newarr=users.filter((eleM)=>{
-    return eleM.id==id
+    return eleM.id===id;
   })
   setUsers(newarr);
 }
@@ -27,60 +29,34 @@ const handleShow=(id)=>{
         <div className="title">
           <h2 className="recomnd">Recommend places</h2>
         </div>
-        {/* <div className="packages"> */}
-          {/* <ul>
-            {
-              packages.map((pkg, index) => {
-              return (
-                <li
-                  className={active === index + 1 ? "active" : ""}
-                  onClick={() => setActive(index + 1)}
-                >
-                  {pkg}
-                </li>
-              );
-            })}
-          </ul> */}
-        {/* </div> */}
         <div className="destinations">
           {
-            users.map((elem) => {
-            const {title,id,date,featuredImage,name,meta,description,slug,tags}=elem;
+            users.filter((element)=>element.featuredImage.id>44500).map((elem) => {
+            const {title,id,date,featuredImage,meta,tags}=elem;
             return (
               <div key={id}  className="destination">
                 <img src={featuredImage.link} alt="" />
-                {/* <img src={title.categories} alt="" /> */}
+                <img src={title.categories} alt="" />
                 <div className="destination2" > {meta.title} <p>{title.categories}</p></div>
-                {/* <div>{meta.description}</div> */}
-                {/* <h3>{title}</h3> */}
-                {/* <p>{destination.subTitle}</p> */}
+                <div>{meta.description}</div>
                 <div>{tags.name}</div>
-                <div className="info">
-                  {/* <div className="services"> */}
-                    {/* <img src={info1} alt="" />
-                    <img src={info2} alt="" />
-                    <img src={info3} alt="" /> */}
-                  {/* </div> */}
-                  
+                <div className="info"> 
                 </div>
                 <div className="distance">
-                  {/* <span>1000 Kms</span> */}
-                  <span>{featuredImage.caption}</span>
+                  {/* <span>{featuredImage.caption}</span> */}
                 </div>
                 <div className="date"><b> {date}</b></div>
-                {
-                  tags.map((elem)=>{
-                    return(
-                      <>
-                      {/* <div>{elem.name}</div> */}
-                      {/* <div>{elem.slug}</div> */}
-                      </>
-                    )
-                  })
-                }
-                <button onClick={()=>handleShow(id,name)}>{slug}</button>
+              {
+                tags.map((eleM)=>{
+                  <div>{eleM.name}</div>
+                })
+              }
               
+                {/* <button onClick={()=>handleShow(id)}>Read more</button> */}
+           <NavLink to='/Recomendplaces'>  <button onClick={()=>handleShow(id)}>Read more</button></NavLink>
+                
               </div>
+              
             );
           })}
         </div>
@@ -105,6 +81,7 @@ background-color:whitesmoke;
     background-color: aquamarine;
     border-radius: 80px;
     padding: 10px;
+    margin-left: 220px;
     border-bottom-right-radius:10px;
   }
   button:hover{
