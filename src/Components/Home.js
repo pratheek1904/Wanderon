@@ -5,24 +5,25 @@ import homeImage from "../Components/background.jpg";
 import Xmas from "./Xmas";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
+import Footer from "./Footer";
 // import Search from "../Search";
 
 export default function Home() {
-  const [loading, setloading] = useState(false);
-  const [posts, setposts] = useState([]);
-  const [search, setSearch] = useState("");
+  // const [loading, setloading] = useState(false);
+  // const [posts, setposts] = useState([]);
+  // const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    const loadingposts = async () => {
-      setloading(true);
-      const response = await axios.get(
-        "https://api.npoint.io/f89acb9ee900ca95b8dc"
-      );
-      setposts(response.data);
-      setloading(false);
-    };
-    loadingposts();
-  }, []);
+  // useEffect(() => {
+  //   const loadingposts = async () => {
+  //     setloading(true);
+  //     const response = await axios.get(
+  //       "https://api.npoint.io/f89acb9ee900ca95b8dc"
+  //     );
+  //     setposts(response.data);
+  //     setloading(false);
+  //   };
+  //   loadingposts();
+  // }, []);
   return (
     <div>
       <Section id="hero">
@@ -39,9 +40,9 @@ export default function Home() {
               <label htmlFor="">Where you want to go</label>
            <NavLink to='/Search'>   <input
                 type="text"
-                onChange={(e) => setSearch(e.target.value)}
+                // onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search Your location"
-                value={search}
+                // value={search}
               /></NavLink>
             </div>
             <div className="container">
@@ -57,6 +58,7 @@ export default function Home() {
         </div>
       </Section>
       <Xmas />
+      <Footer/>
       {/* <Search/> */}
     </div>
   );

@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter,Route, } from  'react-router-dom'
 import NavBar from './NavBar';
 import Xmas from './Components/Xmas';
-import Weekend from './Components/Weekend';
+import Contact from './Components/Contact';
 import Backpack from './Components/Backpack';
 import Home from './Components/Home';
 import Login from './Components/Login';
@@ -18,7 +18,7 @@ function App() {
   <Route path={'/'} exact component={Home}></Route>
   <Route path='/Xmas'  component={Xmas}/>
   <Route path='/Login' component={Login}/>
-  <Route path='/Weekend' component={Weekend}/> 
+  <Route path='/Contact' component={Contact}/> 
   <Route path='/Backpack' component={Backpack}/>
   <Route path='/Recomendplaces' component={Recomendplaces}/> 
   <Route path='/Search' component={Search}/> 

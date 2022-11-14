@@ -68,7 +68,7 @@ const handleRemove=(id)=>{
         <div key={elem.id} >
             <h3>email:{elem.myemail}</h3> 
             <p>password:{elem.mypassword}</p>
-        <NavLink to='/Xmas'><button onClick={()=>handleRemove(elem.id)}>Logout</button></NavLink>
+        <NavLink to='/Home'><button onClick={()=>handleRemove(elem.id)}>Logout</button></NavLink>
           </div>
        </>
         );

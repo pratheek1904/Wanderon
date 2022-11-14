@@ -52,8 +52,8 @@ const handleShow=(id)=>{
                 })
               }
               
-                {/* <button onClick={()=>handleShow(id)}>Read more</button> */}
-           <NavLink to='/Recomendplaces'>  <button onClick={()=>handleShow(id)}>Read more</button></NavLink>
+                <button onClick={()=>handleShow(id)}>Read more</button>
+           {/* <NavLink to='/Recomendplaces'>  <button onClick={()=>handleShow(id)}>Read more</button></NavLink> */}
                 
               </div>
               
