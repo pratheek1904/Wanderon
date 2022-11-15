@@ -18,12 +18,8 @@ const Xmas = () => {
     useEffect(()=>{
         getUsers();
     },[]);
-const handleShow=(id)=>{
-  const newarr=users.filter((eleM)=>{
-    return eleM.id===id;
-  })
-  setUsers(newarr);
-}
+
+
     return (
       <Section id="recommend">
         <div className="title">
@@ -46,14 +42,9 @@ const handleShow=(id)=>{
                   {/* <span>{featuredImage.caption}</span> */}
                 </div>
                 <div className="date"><b> {date}</b></div>
-              {
-                tags.map((eleM)=>{
-                  <div>{eleM.name}</div>
-                })
-              }
               
-                <button onClick={()=>handleShow(id)}>Read more</button>
-           {/* <NavLink to='/Recomendplaces'>  <button onClick={()=>handleShow(id)}>Read more</button></NavLink> */}
+                {/* <button onClick={()=>handleShow(id)}>Read more</button> */}
+           <NavLink to={"Recomendplaces/".concat(id)}><button>Read more</button></NavLink>
                 
               </div>
               

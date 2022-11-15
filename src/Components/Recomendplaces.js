@@ -1,18 +1,23 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const Recomendplaces = () => {
+
+  const {id}=useParams();
   // const {name}=props
   const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
     const response = await fetch("https://api.npoint.io/f89acb9ee900ca95b8dc");
-    setUsers(await response.json());
+    const data =await response.json();
+    setUsers(data.filter(ele=>ele.id==id)[0].tags)
   };
   useEffect(() => {
     getUsers();
   }, []);
+  // console.log()
   return (
   <Section id="recommend">
   <div className="title">
@@ -20,22 +25,17 @@ const Recomendplaces = () => {
   </div>
   <div className="destinations">
     {
-      users.filter((element)=>element.featuredImage.id<44556).map((elem) => {
-      const {title,id,date,featuredImage,meta,tags}=elem;
+      users.map((elem) => {
+      
       return (
-        <div key={id}  className="destination">
-          <img src={featuredImage.link} alt="" />
-          <img src={title.categories} alt="" />
-          <div className="destination2" > {meta.title} <p>{title.categories}</p></div>
-          <div>{meta.description}</div>
-          <div>{tags.name}</div>
+        <div key={elem.id}  className="destination">
+          <div className="destination2" > {elem.name}</div>
+          <div>{elem.slug}</div>
           <div className="info">
           </div>
           <div className="distance">
             {/* <span>{featuredImage.caption}</span> */}
-          </div>
-          <div className="date"><b> {date}</b></div>
-          
+          </div>          
         </div>
         
       );

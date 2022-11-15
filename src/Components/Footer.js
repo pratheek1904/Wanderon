@@ -1,26 +1,76 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
 import styled from "styled-components";
 
 const Footer = () => {
+
+
   return (
-    <Wrapper className="section">
-      <>
+    <Wrapper className="Section">
+      <div className="nav-bar">
         <nav>
-          <div><h1>WanderOn</h1>
-            <ul>
-              <li>Home</li>
-              <li>Search</li>
-              <li>Login</li>
-              <li>Contact</li>
-            </ul>
-          </div>
+        
+          <ul className="nav-links">
+  
+             
+              <li>
+                <a><b><i className="fa-brands fa-instagram"></i>Instagram</b></a>
+              </li>
+        
+      
+           
+              <li>
+                <a ><b><i className="fa-brands fa-facebook"></i>Facebook</b></a>
+              </li>
+         
+        
+              <li>
+               <a > <b><i className="fa-brands fa-linkedin"></i>LinkedIn</b></a>
+              </li>
+     
+              
+              <li>
+               <a > <b><i className="fa-brands fa-twitter"></i>Twitter</b></a>
+              </li>
+          
+          </ul>
         </nav>
-      </>
+      </div>
     </Wrapper>
   );
 };
 const Wrapper = styled.section`
+  border-radius: 1000px;
+  margin: 10px 20px;
+  left: 30px;
+  padding: 0;
+  margin:35px 20px 20px 30px;
+ 
 
+  nav {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: lightgrey; */
+    background-color: lightgoldenrodyellow;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+b{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+b:hover{
+  color:rosybrown
+}
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    list-style: none;
+  }
 
 `;
 

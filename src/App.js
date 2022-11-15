@@ -20,7 +20,7 @@ function App() {
   <Route path='/Login' component={Login}/>
   <Route path='/Contact' component={Contact}/> 
   <Route path='/Backpack' component={Backpack}/>
-  <Route path='/Recomendplaces' component={Recomendplaces}/> 
+  <Route path='/Recomendplaces/:id' component={Recomendplaces}/> 
   <Route path='/Search' component={Search}/> 
   </BrowserRouter>
 
