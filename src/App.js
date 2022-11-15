@@ -4,7 +4,6 @@ import {BrowserRouter,Route, } from  'react-router-dom'
 import NavBar from './NavBar';
 import Xmas from './Components/Xmas';
 import Contact from './Components/Contact';
-import Backpack from './Components/Backpack';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import Recomendplaces from './Components/Recomendplaces';
