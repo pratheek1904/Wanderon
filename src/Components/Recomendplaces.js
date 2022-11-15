@@ -7,14 +7,13 @@ const Recomendplaces = () => {
   const { id } = useParams();
   // const {name}=props
   const [users, setUsers] = useState([]);
-  const getUsers = async () => {
-    const response = await fetch(
-      "https://api.npoint.io/f89acb9ee900ca95b8dc"
-    );
-    const data = await response.json();
-    setUsers(data.filter((ele) => ele.id === id)[0].tags);
-  };
+ 
   useEffect(() => {
+    const getUsers = async () => {
+      const response = await fetch("https://api.npoint.io/f89acb9ee900ca95b8dc");
+      const data = await response.json();
+      setUsers(data.filter((ele) => ele.id == id)[0].tags);
+    };
     getUsers();
   }, []);
   return (
