@@ -9,21 +9,7 @@ import Footer from "./Footer";
 // import Search from "../Search";
 
 export default function Home() {
-  // const [loading, setloading] = useState(false);
-  // const [posts, setposts] = useState([]);
-  // const [search, setSearch] = useState("");
 
-  // useEffect(() => {
-  //   const loadingposts = async () => {
-  //     setloading(true);
-  //     const response = await axios.get(
-  //       "https://api.npoint.io/f89acb9ee900ca95b8dc"
-  //     );
-  //     setposts(response.data);
-  //     setloading(false);
-  //   };
-  //   loadingposts();
-  // }, []);
   return (
     <div>
       <Section id="hero">
@@ -40,9 +26,7 @@ export default function Home() {
               <label htmlFor="">Where you want to go</label>
            <NavLink to='/Search'>   <input
                 type="text"
-                // onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search Your location"
-                // value={search}
               /></NavLink>
             </div>
             <div className="container">
@@ -59,7 +43,6 @@ export default function Home() {
       </Section>
       <Xmas />
       <Footer/>
-      {/* <Search/> */}
     </div>
   );
 }
@@ -316,83 +299,3 @@ const Section = styled.section`
 
 
 
-
-
-// <div>
-// <div className="title">
-// </div>
-// <div className="destinations">
-//   <div className="rcmnd">
-//   {
-//     loading ? (
-//     <h4>Loading...</h4>
-//   ) : (
-//     posts
-//       .filter((value) => {
-//         if (search == "") {
-//           {
-//             /* return value */
-//           }
-//         } else if (
-//           value.meta.title
-//             .toLowerCase()
-//             .includes(search.toLowerCase())
-//         ) {
-//           return value.meta.title;
-//         }
-//       })
-//       .map((elem) => {
-//         const { title, id, date, featuredImage, meta, tags } = elem;
-//         return (
-//           <div key={id} className="destination">
-//             <img src={featuredImage.link} alt="" />
-//             <img src={title.categories} alt="" />
-//             <div className="destination2">
-//               {" "}
-//               {meta.title} <p>{title.categories}</p>
-//             </div>
-//             <div>{meta.description}</div>
-//             <div>{tags.name}</div>
-//             <div className="info"></div>
-//             <div className="distance">
-//               <span>{featuredImage.caption}</span>
-//             </div>
-//             <div className="date">
-//               <b> {date}</b>
-//             </div>
-//           </div>
-//         );
-//       })
-//   )}
-//   </div>
-// </div>
-// </div>
-
-// <div key={id}  className="destination">
-// <img src={featuredImage.link} alt="" />
-// <img src={title.categories} alt="" />
-// <div className="destination2" > {meta.title} <p>{title.categories}</p></div>
-// <div>{meta.description}</div>
-// <div>{tags.name}</div>
-// <div className="info">
-// </div>
-// <div className="distance">
-//   <span>{featuredImage.caption}</span>
-// </div>
-// <div className="date"><b> {date}</b></div>
-// {/* <button onClick={()=>handleShow(id)}>Read more</button> */}
-// </div>
-
-// import React from "react";
-// import '../Components/Comp.css'
-
-// const Home = () => {
-//   return (
-//       <div className="background">
-//      <img src={image}/>
-//       </div>
-//   );
-// };
-
-// const image=new URL("../Components/background.jpg",import.meta.url)
-// export default Home;
