@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../Components/Comp.css";
 import styled from "styled-components";
 import homeImage from "../Components/background.jpg";
 import Xmas from "./Xmas";
-import axios from "axios";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 // import Search from "../Search";
