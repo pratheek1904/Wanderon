@@ -12,7 +12,7 @@ const Recomendplaces = () => {
   const getUsers = async () => {
     const response = await fetch("https://api.npoint.io/f89acb9ee900ca95b8dc");
     const data =await response.json();
-    setUsers(data.filter(ele=>ele.id==id)[0].tags)
+    setUsers(data.filter(ele=>ele.id===id)[0].tags)
   };
   useEffect(() => {
     getUsers();

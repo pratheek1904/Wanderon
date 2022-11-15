@@ -14,23 +14,23 @@ const Footer = () => {
   
              
               <li>
-                <a><b><i className="fa-brands fa-instagram"></i>Instagram</b></a>
+                <b><i className="fa-brands fa-instagram"></i>Instagram</b>
               </li>
         
       
            
               <li>
-                <a ><b><i className="fa-brands fa-facebook"></i>Facebook</b></a>
+                <b><i className="fa-brands fa-facebook"></i>Facebook</b>
               </li>
          
         
               <li>
-               <a > <b><i className="fa-brands fa-linkedin"></i>LinkedIn</b></a>
+        <b><i className="fa-brands fa-linkedin"></i>LinkedIn</b>
               </li>
      
               
               <li>
-               <a > <b><i className="fa-brands fa-twitter"></i>Twitter</b></a>
+               <b><i className="fa-brands fa-twitter"></i>Twitter</b>
               </li>
           
           </ul>
