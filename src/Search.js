@@ -31,12 +31,12 @@ const Search = () => {
         {
           loading?(<h4>Loading...</h4>):(
             (posts.filter((value)=>{
-              if(search==='')
+              if(search===''){
                 return value
-              if(value.meta.title.toLowerCase().includes(search.toLowerCase())){
+              }
+              else if(value.meta.title.toLowerCase().includes(search.toLowerCase())){
                 return value.meta.title
               }
-              return true
             }).map((elem)=>{
             const { title, id, date, featuredImage, meta, tags } = elem;
             return (
@@ -59,7 +59,6 @@ const Search = () => {
               </div>
             );
             })
-
             )
           )
           }
