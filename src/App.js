@@ -1,6 +1,6 @@
 
 import './App.css';
-import {BrowserRouter,Route, } from  'react-router-dom'
+import {HashRouter,Route } from  'react-router-dom'
 import NavBar from './NavBar';
 import Xmas from './Components/Xmas';
 import Contact from './Components/Contact';
@@ -11,7 +11,7 @@ import Search from './Search';
 
 function App() {
   return (
-  <BrowserRouter>
+  <HashRouter>
   <NavBar/>
 
   <Route path={'/'} exact component={Home}></Route>
@@ -20,7 +20,8 @@ function App() {
   <Route path='/Contact' component={Contact}/> 
   <Route path='/Recomendplaces/:id' component={Recomendplaces}/> 
   <Route path='/Search' component={Search}/> 
-  </BrowserRouter>
+    
+  </HashRouter>
 
   );
 }
